@@ -1,496 +1,587 @@
 <!DOCTYPE html>
-  <html lang="id">
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donat Annasywa 🍩</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+</head>
 
+<body>
     <style>
-      /*  Gaya Umum */
-      body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background-color: #fff8f5;
-        color: #5a3e36;
-        text-align: center;
-        scroll-behavior: smooth;
-      }
-
-      /* === Navbar === */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 40px;
-        background-color: #ffe4ec;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        gap: 60px;
-
-
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 600;
-        color: #d97784;
-        font-size: 1.2rem;
-      }
-
-      .logo img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 25px;
-      }
-
-      .nav-links a {
-        color: #5a3e36;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-
-      .nav-links a:hover {
-        color: #d97784;
-      }
-
-      /* === Bagian Hero === */
-      #home {
-        background-image: url("background 2.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        padding-top: 70px;
-        position: relative;
-      }
-
-      /* Tambahkan lapisan warna transparan di atas gambar */
-      #home::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.4);
-        /* ubah warna & transparansi di sini */
-        z-index: 0;
-      }
-
-      /* Pastikan isi teks tampil di atas overlay */
-      #home * {
-        position: relative;
-        z-index: 1;
-      }
-
-      #home h1 {
-        font-size: 2.8rem;
-        margin-bottom: 10px;
-      }
-
-      #home span {
-        color: #ffd8e0;
-      }
-
-      #home p {
-        font-size: 1.2rem;
-        margin: 5px 0;
-      }
-
-      .btn {
-        display: inline-block;
-        margin-top: 20px;
-        background-color: #ffb6c1;
-        color: #5a3e36;
-        padding: 12px 25px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-
-      .btn:hover {
-        background-color: #ffc7cf;
-        transform: scale(1.05);
-      }
-
-      /* === Tentang Kami === */
-      #about {
-        padding: 80px 20px;
-        background-color: #fff;
-      }
-
-      #about h2 {
-        font-size: 2rem;
-        color: #d97784;
-      }
-
-      #about p {
-        max-width: 700px;
-        margin: 20px auto;
-        line-height: 1.8;
-      }
-
-      /* === Menu === */
-      #menu {
-        padding: 80px 20px;
-        background-color: #fff2f6;
-      }
-
-      #menu h2 {
-        font-size: 2rem;
-        color: #d97784;
-        margin-bottom: 40px;
-      }
-
-      .menu-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-      }
-
-
-
-      .item {
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        width: 250px;
-        transition: 0.3s;
-      }
-
-      .item:hover {
-        transform: translateY(-5px);
-      }
-      .item img{
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 12px;
-      }
- 
-      .item h3 {
-        color: #5a3e36;
-        margin-bottom: 10px;
-      }
-       .item {
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      width: 250px;
-      transition: 0.3s;
-    }
-
-    .item:hover {
-      transform: translateY(-5px);
-    }
-
-    .item h3 {
-      color: #5a3e36;
-      margin-bottom: 10px;
-    }
-     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff7f0;
-      margin: 0;
-      padding: 0;
-    }
-
-    #testimoni-section {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #fff;
-    }
-
-    #testimoni-section h2 {
-      color: #d97784;
-      margin-bottom: 40px;
-    }
-
-    #testimoni-container {
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .testimoni-item {
-      display: none;
-      transition: opacity 0.5s ease;
-    }
-
-    .testimoni-item.active {
-      display: block;
-      opacity: 1;
-    }
-
-    .testimoni-item p {
-      font-size: 1.1em;
-      color: #555;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-
-    .testimoni-item h4 {
-      color:  #ffb6c1;
-      margin: 0;
-    }
-
-    .testimoni-item img {
-      width: 85px;
-      height: 85px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 3px none;
-    }
-
-    #testimoni-dots {
-      margin-top: 20px;
-    }
-
-    .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 5px;
-      background-color: #ddd;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .dot.active {
-      background-color: #ff69b4 ;
-    }
-     footer {
-    background-color: #ffb6c1;/* pastel pink lembut */
-      padding: 35px 20px;
-      text-align: center;
-      color: #5a3e36;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.95rem;
-      box-shadow: 0 -3px 10px rgba(255, 182, 193, 0.2); /* efek lembut tanpa garis */
-    }
-
-    /* Nama & tagline */
-    footer p strong {
-      color: #ff69b4; /* pink cerah */
-      font-size: 1.2rem;
-    }
-
-    /* Social media links */
-    footer .social {
-      margin: 20px 0 10px;
-    }
-
-    footer .social a {
-      display: inline-block;
-      margin: 0 12px;
-      color: #ff69b4;
-      font-size: 1.6rem;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    footer .social a:hover {
-      color: #ff1493;
-      transform: scale(1.2);
-    }
-
-    /* Copyright */
-    footer .copyright {
-      margin-top: 15px;
-      font-size: 0.85rem;
-      color: #8c6b63;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-      footer {
-        font-size: 0.85rem;
-      }
-
-      footer .social a {
-        font-size: 1.4rem;
-        margin: 0 8px;
-      }
-    }
-  </style>
-  </head>
-
-  <body>
-
-    <!-- Navbar -->
-    <nav>
-      <div class="logo">
-        <img src="Logo donat.png" alt="Logo Donat Annasywa">
-        donat annasywa
-      </div>
-        <div class="hamburger" id="hamburger"><i class='bx bx-menu'></i></div>
-      <div class="nav-links">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#menu">Menu</a>
-        <a href="testimoni">testimoni</a>
-        </div>
-    </nav>
-
-    <!-- Bagian Hero -->
-    <section id="home">
-      <h1>Selamat Datang di <span>Donat Annasywa </span></h1>
-      <p>Manisnya bukan cuma di rasa tapi juga di hati </p>
-      <p>Donat lembut, aroma menggoda, dan elegan di setiap gigitan.</p>
-      <a href="#menu" class="btn">Lihat Menu</a>
-    </section>
-
-    <!-- Tentang Kami -->
-    <section id="about">
-      <h2>Tentang Donat Annasywa</h2>
-      <p>
-        Di <strong>Donat Annasywa</strong>, setiap donat dibuat dengan cinta dan sentuhan elegan.
-        Kami menggunakan bahan-bahan terbaik untuk menghasilkan donat yang lembut, manis, dan selalu segar.
-        Dari klasik gula halus hingga 
-        semua kami buat untuk membawa senyum di setiap gigitan. 
-      </p>
-    </section>
-
-    <!-- Menu Donat -->
-    <section id="menu">
-      <h2>Menu Donat Kami</h2>
-      <div class="menu-list">
-        <div class="item">
-          <img src="gula aren 2.jpg" alt="gambar 1">
-          <h3>donat gula aren</h3>
-          <p>“Klasik tapi istimewa: aroma gula aren yang hangat berpadu dengan tekstur donat yang lembut.”</p>
-        </div>
-        <div class="item">
-          <img src="gambar donat putih.jpg" alt="gambar 2">
-          <h3>donat gula halus</h3>
-          <p>“Manisnya natural, teksturnya lembut, cocok untuk teman kopi atau teh soremu.”</p>
-        </div>
-        <div class="item">
-          <img src="bomboloni.jpg" alt="gambar 3">
-          <h3>bomboloni</h3>
-          <p>“Bomboloni Lembut, Manisnya Meleleh di Hati </p>
-        </div>
-      </div>
-       </section>
- <h2>apa kata mereka tentang donat annasywa?</h2>
-  <div id="testimoni-container"> 
-
-    <div id="testimoni1" class="testimoni-item active">
-        <img src="Screen1.png" alt="rafael Struick">
-        <p>"Donat Annasywa punya tekstur lembut banget, rasa manisnya pas. Setiap gigitan bikin nagih!"</p>
-        <h4>— Rafael Struick</h4>
-      </div>
- <div id="testimoni2" class="testimoni-item">
-        <img src="welber jardim.jpg" alt="Welber de Halim Jardim">
-        <p>"Saya suka banget! Tidak terlalu manis, tapi tetap gurih dan lembut. Cocok buat teman kopi sore!"</p>
-        <h4>— Welber de Halim Jardim</h4>
-      </div>
-       <div id="testimoni3" class="testimoni-item">
-        <img src="kenan yildiz.jpg" alt="Kenan Yildiz">
-        <p>"Donat Annasywa beda dari yang lain. Anak-anak di rumah juga suka banget!"</p>
-        <h4>— Kenan Yildiz</h4>
-      </div>
-
-    </div>
-     <div id="testimoni-dots">
-      <span id="dot1" class="dot active"></span>
-      <span id="dot2" class="dot"></span>
-      <span id="dot3" class="dot"></span>
-    </div>
-  </section>
-
-  <script>
-    const testimonis = [
-      document.getElementById('testimoni1'),
-      document.getElementById('testimoni2'),
-      document.getElementById('testimoni3')
-    ];
-
-    const dots = [
-      document.getElementById('dot1'),
-      document.getElementById('dot2'),
-      document.getElementById('dot3')
-    ];
-
-    let index = 0;
-
-    function showTestimoni(n) {
-      testimonis.forEach((t, i) => {
-        t.classList.toggle('active', i === n);
-        dots[i].classList.toggle('active', i === n);
-      });
-    }
-
-    function nextTestimoni() {
-      index = (index + 1) % testimonis.length;
-      showTestimoni(index);
-    }
-
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        index = i;
-        showTestimoni(i);
-      });
-    });
-
-    setInterval(nextTestimoni, 4000);
-  </script>
-
-
-</section>
-      <footer>
-    <p><strong>“Donat Annasywa — Lembutnya Bahagia Keluarga” </strong> </p>
-
-    <div class="social">
-      <a href="https://wa.me/6281234567890" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook"></i>
-      </a>
-    </div>
-
-    <div class="copyright">
-      <p>© 2025  donat Annasywa</p>
-    </div>
-  </footer>
- 
-
-
-
-  </body>
-
-  </html>
-
-
-
-
-
-
+        /* ===== Gaya Umum ===== */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff8f5;
+            color: #5a3e36;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===== Navbar ===== */
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #ffe4ec;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2000;
+        }
+
+        /* LOGO */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: #d97784;
+            font-size: 1.3rem;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* HAMBURGER DEFAULT — HIDDEN DI DESKTOP */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+
+        }
+
+        .hamburger i {
+            font-size: 30px;
+
+            color: #3d0008;
+        }
+
+        /* NAVLINKS DESKTOP */
+        .nav-links {
+            margin-right: 10px;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            transition: 0.4s;
+        }
+
+
+        .nav-links a {
+            color: #5a3e36;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d97784;
+        }
+
+        /* ===== Hero ===== */
+        #home {
+            background-image: url("gambar10..jpg");
+            /* Ganti sesuai gambar kamu */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            padding-top: 70px;
+            position: relative;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        #home * {
+            position: relative;
+            z-index: 1;
+        }
+
+        #home h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        #home span {
+            color: #ffd8e0;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+            max-width: 650px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #ffb6c1;
+            color: #5a3e36;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ffc7cf;
+            transform: scale(1.05);
+        }
+
+        /* ===== About ===== */
+        #about {
+            padding: 80px 20px;
+            background-color: #fff;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            color: #d97784;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            max-width: 700px;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* ===== Menu ===== */
+        #menu {
+            padding: 80px 20px;
+            background-color: #fff2f6;
+        }
+
+        #menu h2 {
+            font-size: 2rem;
+            color: #d97784;
+            margin-bottom: 40px;
+        }
+
+        .menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .item {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .item h3 {
+            color: #5a3e36;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            font-size: 0.95rem;
+        }
+
+        /* ===== Testimoni ===== */
+        #testimoni-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        #testimoni-section h2 {
+            color: #d97784;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        #testimoni-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimoni-item {
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .testimoni-item.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .testimoni-item p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimoni-item h4 {
+            color: #ffb6c1;
+            margin: 0;
+        }
+
+        .testimoni-item img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        #testimoni-dots {
+            margin-top: 20px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #ddd;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #ff69b4;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #ffb6c1, #ff8caf);
+            padding: 40px 20px;
+            text-align: center;
+            color: #5a3e36;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 60px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -4px 15px rgba(255, 105, 180, 0.2);
+        }
+
+        footer .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        footer .social {
+            margin: 25px 0 15px;
+        }
+
+        footer .social a {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 1.8rem;
+            color: #fff;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(4px);
+            border-radius: 50%;
+            transition: 0.3s ease;
+        }
+
+        footer .social a:hover {
+            transform: scale(1.2) rotate(8deg);
+            background: #fff;
+            color: #ff69b4;
+        }
+
+        footer .address {
+            color: #fff;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        footer .copyright {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #ffe6ec;
+        }
+
+
+        /* ===== Mobile ===== */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                margin-right: 50px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 40%;
+                height: 20vh;
+                background-color: #ffe4ec;
+                flex-direction: column;
+                gap: 30px;
+                justify-content: start;
+                padding-top: 120px;
+                transition: 0.4s ease;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+                z-index: 1500;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            #home h1 {
+                font-size: 1.8rem;
+                padding: 0 20px;
+            }
+
+            #home p {
+                font-size: 1.05rem;
+                max-width: 90%;
+            }
+
+            .menu-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .item {
+                width: 90%;
+            }
+
+            #about p {
+                font-size: 1rem;
+                max-width: 90%;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <nav>
+            <div class="logo">
+                <img src="Logo donat.png" alt="Logo Donat Annasywa">
+                Donat Annasywa
+            </div>
+
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#testimoni-section">Testimoni</a>
+            </div>
+        </nav>
+
+
+        <!-- JS Hamburger & Testimoni -->
+        <script>
+            // Hamburger menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            // Tutup menu saat nav-link diklik
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+
+            // Testimoni slider
+            const testimonis = [
+                document.getElementById('testimoni1'),
+                document.getElementById('testimoni2'),
+                document.getElementById('testimoni3')
+            ];
+            const dots = [
+                document.getElementById('dot1'),
+                document.getElementById('dot2'),
+                document.getElementById('dot3')
+            ];
+            let index = 0;
+            function showTestimoni(n) {
+                testimonis.forEach((t, i) => {
+                    t.classList.toggle('active', i === n);
+                    dots[i].classList.toggle('active', i === n);
+                });
+            }
+            function nextTestimoni() {
+                index = (index + 1) % testimonis.length;
+                showTestimoni(index);
+            }
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    index = i;
+                    showTestimoni(i);
+                });
+            });
+            setInterval(nextTestimoni, 4000);
+        </script>
+
+        <!-- Hero -->
+        <section id="home">
+            <h1>Selamat Datang di <span>Donat Annasywa</span></h1>
+            <p>Manisnya bukan cuma di rasa tapi juga di hati</p>
+            <p>Donat lembut, aroma menggoda, dan elegan di setiap gigitan.</p>
+            <a href="#menu" class="btn">Lihat Menu</a>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <h2>Tentang Donat Annasywa</h2>
+            <p>
+                Di <strong>Donat Annasywa</strong>, setiap donat dibuat dengan cinta dan sentuhan elegan.
+                Kami menggunakan bahan-bahan terbaik untuk menghasilkan donat yang lembut, manis, dan selalu segar.
+                Dari klasik gula halus hingga semua kami buat untuk membawa senyum di setiap gigitan.
+            </p>
+        </section>
+
+        <!-- Menu -->
+        <section id="menu">
+            <h2>Menu Donat Kami</h2>
+            <div class="menu-list">
+                <div class="item">
+                    <img src="gula aren 2.jpg" alt="donat gula aren">
+                    <h3>Donat Gula Aren</h3>
+                    <p>Aroma gula aren hangat berpadu dengan tekstur donat yang lembut.</p>
+                </div>
+                <div class="item">
+                    <img src="gambar donat putih.jpg" alt="donat gula halus">
+                    <h3>Donat Gula Halus</h3>
+                    <p>Manis natural, lembut, cocok untuk teman kopi atau teh soremu.</p>
+                </div>
+                <div class="item">
+                    <img src="bomboloni.jpg" alt="bomboloni">
+                    <h3>Bomboloni</h3>
+                    <p>Lembut, manisnya meleleh di hati.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimoni -->
+        <section id="testimoni-section">
+            <h2>Apa kata mereka tentang Donat Annasywa?</h2>
+            <div id="testimoni-container">
+                <div id="testimoni1" class="testimoni-item active">
+                    <img src="Screen1.png" alt="Rafael Struick">
+                    <p>"Donat Annasywa punya tekstur lembut banget, rasa manisnya pas. Setiap gigitan bikin nagih!"</p>
+                    <h4>Rafael Struick</h4>
+                </div>
+                <div id="testimoni2" class="testimoni-item">
+                    <img src="welber jardim.jpg" alt="Welber de Halim Jardim">
+                    <p>"Saya suka banget! Tidak terlalu manis, tapi tetap gurih dan lembut. Cocok buat teman kopi sore!"
+                    </p>
+                    <h4>Welber de Halim Jardim</h4>
+                </div>
+                <div id="testimoni3" class="testimoni-item">
+                    <img src="kenan yildiz.jpg" alt="Kenan Yildiz">
+                    <p>"Donat Annasywa beda dari yang lain. Anak-anak di rumah juga suka banget!"</p>
+                    <h4>Kenan Yildiz</h4>
+                </div>
+            </div>
+            <div id="testimoni-dots">
+                <span id="dot1" class="dot active"></span>
+                <span id="dot2" class="dot"></span>
+                <span id="dot3" class="dot"></span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <h3>Donat Annasywa</h3>
+                    <p>"Lembutnya Bahagia Keluarga"</p>
+                </div>
+
+
+                <!-- Social Media -->
+                <div class="footer-links">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="https://wa.me/6285292908280" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/ummu.faatin_donatanasywa" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/ummu.faatin_donatanasywa" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- Info -->
+                <div class="footer-info">
+                    <h4>Informasi Toko</h4>
+                    <p><i class="fas fa-phone"></i> 0852-9290-8280</p>
+                    <p><i class="fas fa-user"></i> Ummu Fatin</p>
+                    <p>
+                        <a href="https://maps.app.goo.gl/zSva8dZninsxmAR5A" target="_blank"
+                            style="color:#ff1493; text-decoration:none;">
+                            <i class="fas fa-map-marker-alt"></i> Lihat Lokasi di Google Maps
+                        </a>
+                    </p>
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+                <p>© 2025 Donat Annasywa — All Rights Reserved</p>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
